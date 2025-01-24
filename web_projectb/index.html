@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">GitHubUsers</button>
+</body>
+<script>
+    function GetGitHubUsers(){
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET","https:/api.github.com/users",true);
+        xhr.onload = function(){
+            if(this.status==200){
+                var users = this.responseText;
+                console.log(users);
+            }
+        }
+        xhr.send();
+    }
+    document.getElementById("btn").addEventListener("click",GetGitHubUsers);
+</script>
+</html>

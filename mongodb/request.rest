@@ -1,0 +1,26 @@
+GET http://localhost:8000/api/user/getAllUsers
+
+###
+
+POST http://localhost:8000/api/user/create
+Content-Type: application/json
+
+{
+    "name":"John4",
+    "email":"john4@gmail.com",
+    "address":"Taiwan"
+}
+
+
+###
+PUT http://localhost:8000/api/user/update/6709ff5d3e4347b36848c27c
+Content-Type: application/json
+
+{
+    "name":"John2",
+    "email":"john2@gmail.com",
+    "address":"America"
+}
+
+###
+delete http://localhost:8000/api/user/delete/6709ff5d3e4347b36848c27c
