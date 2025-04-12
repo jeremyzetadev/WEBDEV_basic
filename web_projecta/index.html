@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <button id="btn">GetCoords</button>
 </body>
@@ -12,14 +14,22 @@
 <script>
     const api_uri = "https://api.wheretheiss.at/v1/satellites/25544"
 
-    async function GetISSCoords(){
-        const res = await fetch(api_uri);
-        const json_data = await res.json();
+    async function GetISSCoords() {
+        try {
+            const res = await fetch(api_uri);
+            if(!res.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const json_data = await res.json();
 
-        console.log(json_data);
-        console.log(json_data.latitude);
-        console.log(json_data.longitude);
+            console.log(json_data);
+            console.log(json_data.latitude);
+            console.log(json_data.longitude);
+        } catch (err) {
+            console.log(err.response.status);
+        } finally {
+
+        }
     }
-    document.getElementById("btn").addEventListener("click",GetISSCoords);
+    document.getElementById("btn").addEventListener("click", GetISSCoords);
 </script>
+
 </html>
