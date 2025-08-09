@@ -1,0 +1,54 @@
+.main-wrapper{
+    display: flex;
+    justify-content: space-between;
+    background-color: darkgrey;
+    padding: 10px;
+    margin: 10px;
+    color: pink;
+}
+
+.main-wrapper .right-nav{
+    display:flex;
+    gap: 10px;
+}
+
+.wrapper .nav{
+    display:flex;
+    justify-content: space-evenly;
+    background-color: gray;
+    padding: 10px;
+    margin: 10px;
+    color: lightseagreen;
+}
+
+.wrapper .page-login{
+    margin: auto;
+    padding: 10px;
+    width: 400px;
+    background-color: rgb(64, 170, 64);
+}
+
+.wrapper .page-login form{
+    padding: 10px;
+    align-content: center;
+}
+
+input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+}
+
+button{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 700ms ease;
+}
+
+button:hover{
+    background-color: coral;
+}
+
